@@ -29,6 +29,9 @@
       <th scope="col">Jabatan</th>
       <th scope="col">Tanggal Masuk</th>
       <th scope="col">Gaji</th>
+      <th scope="col">Action</th>
+
+
     </tr>
   </thead>
   <tbody>
@@ -55,13 +58,13 @@
       <td><?=$data['gaji']?></td>
       
       <td>
-        <a class="btn btn-info btn-sm" href="edit.php?id=<?=$data['id']?>"><i class="fa fa-pen-to-square"></i></a>
+        <a class="btn btn-info btn-sm" href="edit.php?id=<?=$data['id_karyawan']?>"><i class="fa fa-pen-to-square"></i></a>
       
-        <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#hapus<?=$data['id']?>">
+        <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#hapus<?=$data['id_karyawan']?>">
           <i class="fa-solid fa-trash"></i>
         </button>
         <!-- Modal -->
-        <div class="modal fade" id="hapus<?=$data['id']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="hapus<?=$data['id_karyawan']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -70,15 +73,6 @@
               </div>
               <div class="modal-body">
                 Yakin data <b><?=$data['nama_karyawan']?></b> ingin dihapus?
-              </div>
-              <div class="modal-body">
-                Yakin data <b><?=$data['jabata']?></b> ingin dihapus?
-              </div>
-              <div class="modal-body">
-                Yakin data <b><?=$data['tanggal_masuk']?></b> ingin dihapus?
-              </div>
-              <div class="modal-body">
-                Yakin data <b><?=$data['gaji']?></b> ingin dihapus?
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
